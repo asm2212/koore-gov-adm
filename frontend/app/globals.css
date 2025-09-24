@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------
+   Ecomflow-Inspired Dark Green Theme
+--------------------------------------------------------- */
+:root {
+  --background: 145 20% 0.6%;     /* #00150C - Deep green */
+  --foreground: 0 0% 100%;        /* #FFFFFF - White text */
+
+  --primary: 145 100% 40%;         /* #00C764 */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 145 90% 30%;        /* #00A856 */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 145 100% 45%;          /* #00D96F */
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 145 20% 5%;             /* #0A1E14 */
+  --muted-foreground: 0 0% 70%;
+
+  --card: 0 0% 2%;                 /* #001A0F */
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 2%;
+  --popover-foreground: 0 0% 98%;
+
+  --border: 145 15% 10%;           /* #002214 */
+  --input: 145 15% 10%;
+  --ring: 145 100% 40%;            /* #00C764 */
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+}
+
+.dark {
+  --background: 145 20% 0.6%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 2%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 2%;
+  --popover-foreground: 0 0% 98%;
+  --border: 145 15% 10%;
+  --input: 145 15% 10%;
+  --ring: 145 100% 40%;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Base styles */
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Animation for tooltips */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
