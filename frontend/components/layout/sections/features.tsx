@@ -38,7 +38,7 @@ export const FeaturesSection = () => {
   return (
     <section
       id="pillars"
-      className="w-full bg-background py-24 sm:py-32 px-4 lg:px-0"
+      className="w-full bg-[#00150C] py-24 sm:py-32 px-4 lg:px-0"
       aria-labelledby="pillars-heading"
     >
       <div className="max-w-7xl mx-auto">
@@ -46,14 +46,14 @@ export const FeaturesSection = () => {
         <div className="text-center max-w-3xl mx-auto space-y-5 mb-16">
           <p
             id="pillars-heading"
-            className="text-lg text-accent font-semibold tracking-wider uppercase"
+            className="text-lg text-[#00C764] font-semibold tracking-wider uppercase"
           >
             Strategic Pillars
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Ten-Year Development Plan
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-gray-300 leading-relaxed">
             The vision is to achieve improved welfare and raise the standard of living by addressing macroeconomic, sectoral, and institutional challenges.
           </p>
         </div>
@@ -71,17 +71,17 @@ export const FeaturesSection = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
-                <Card className="h-full border border-border bg-card/80 backdrop-blur-md shadow-md hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden group">
+                <Card className="h-full border border-[#002214] bg-[#001A0F]/80 backdrop-blur-md shadow-md hover:shadow-2xl transition-all duration-300 rounded-2xl overflow-hidden group">
                   <CardHeader className="flex flex-col items-center space-y-3 pb-4">
-                    <div className="p-3 bg-accent/20 text-accent rounded-full group-hover:bg-accent/30 transition-colors">
+                    <div className="p-3 bg-[#00C764]/20 text-[#00C764] rounded-full group-hover:bg-[#00C764]/30 transition-colors">
                       <Icon size={28} strokeWidth={1.5} />
                     </div>
-                    <CardTitle className="text-lg font-bold text-foreground text-center px-2">
+                    <CardTitle className="text-lg font-bold text-white text-center px-2">
                       {pillar.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-center">
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed text-center">
                       {pillar.description}
                     </p>
                   </CardContent>

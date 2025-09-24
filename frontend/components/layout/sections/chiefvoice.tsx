@@ -15,7 +15,7 @@ export const ChiefVoiceSection = () => {
   return (
     <section
       id="chief-voice"
-      className="relative w-full overflow-hidden bg-background text-foreground"
+      className="relative w-full overflow-hidden bg-[#00150C] text-white"
       aria-labelledby="chief-voice-heading"
     >
       <div className="flex flex-col lg:flex-row min-h-screen lg:h-[90vh]">
@@ -45,7 +45,7 @@ export const ChiefVoiceSection = () => {
               >
                 Chief’s Voice
               </h1>
-              <p className="text-sm sm:text-base text-gray-100 mt-1 max-w-xs mx-auto">
+              <p className="text-sm sm:text-base text-gray-200 mt-1 max-w-xs mx-auto">
                 Koore Government Chief Talk
               </p>
             </motion.div>
@@ -68,7 +68,7 @@ export const ChiefVoiceSection = () => {
               >
                 Tarekegn Bekele
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mt-2 font-medium">
+              <p className="text-lg md:text-xl text-[#00C764] mt-2 font-medium">
                 Chief Administrator of Koore Zone
               </p>
             </motion.div>
@@ -78,12 +78,12 @@ export const ChiefVoiceSection = () => {
               initial={{ opacity: 0, x: -40 }}
               animate={isLoaded ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-[#001A0F]/80 backdrop-blur-md border border-[#002214] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <h2 className="text-xl sm:text-2xl font-semibold text-accent mb-2">
+              <h2 className="text-xl sm:text-2xl font-semibold text-[#00C764] mb-2">
                 Diversity is our Strength for Growth!
               </h2>
-              <p className="italic leading-relaxed text-muted-foreground">
+              <p className="italic leading-relaxed text-gray-300">
                 “Building instead of tearing down: it should be part of our daily practice to move closer to each other with love and understanding. By nurturing our relationships with each other, we can achieve growth and prosperity. This requires the willingness of every citizen to take responsibility for this activity. Through coming together and supporting one another, we can climb the tower of success much faster.”
               </p>
             </motion.div>
@@ -93,12 +93,12 @@ export const ChiefVoiceSection = () => {
               initial={{ opacity: 0, x: -40 }}
               animate={isLoaded ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+              className="bg-[#001A0F]/80 backdrop-blur-md border border-[#002214] rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <h2 className="text-xl sm:text-2xl font-semibold text-accent mb-2">
+              <h2 className="text-xl sm:text-2xl font-semibold text-[#00C764] mb-2">
                 Brotherhood and Sisterhood
               </h2>
-              <p className="italic leading-relaxed text-muted-foreground">
+              <p className="italic leading-relaxed text-gray-300">
                 “As brotherhood and sisterhood continue to strengthen, our peace will be unbreakable. Their role is irreplaceable for rapid development and common prosperity. Therefore, every citizen should fulfill their responsibility so that our solidarity can develop.”
               </p>
             </motion.div>
@@ -107,7 +107,7 @@ export const ChiefVoiceSection = () => {
       </div>
 
       {/* Decorative Vertical Line (Desktop Only) */}
-      <div className="hidden lg:block absolute top-1/3 left-[40%] w-px h-1/3 bg-accent/30 pointer-events-none"></div>
+      <div className="hidden lg:block absolute top-1/3 left-[40%] w-px h-1/3 bg-[#00C764]/30 pointer-events-none"></div>
     </section>
   );
 };

@@ -12,7 +12,7 @@ app.use(cookieParser());
 // If your frontend runs on http://localhost:3000
 app.use(
   cors({
-    origin: process.env.FRONTEND_ORIGIN || "http://localhost:3000",
+    origin: process.env.FRONTEND_ORIGIN || "http://localhost:3001",
     credentials: false, // not using cookies for auth in Option A
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],

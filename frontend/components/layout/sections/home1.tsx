@@ -119,17 +119,17 @@ export const HeroSection = () => {
 
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-black/30"></div>
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background/90 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#00150C]/90 to-transparent pointer-events-none"></div>
 
       {/* Overlay text */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
         <FadeIn>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
             Welcome to Koore Zone
           </h1>
         </FadeIn>
         <FadeIn delay={0.3}>
-          <p className="text-color-white text-lg sm:text-xl md:text-2xl text-primary mt-4 drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#00C764] mt-4 drop-shadow-md">
             Driving Development, Unity, and Prosperity
           </p>
         </FadeIn>
@@ -137,7 +137,7 @@ export const HeroSection = () => {
         {/* Scroll down arrow */}
         <button
           onClick={handleScrollDown}
-          className="absolute bottom-8 animate-bounce text-foreground hover:text-primary transition-colors"
+          className="absolute bottom-8 animate-bounce text-white hover:text-[#00C764] transition-colors"
           aria-label="Scroll down to content"
         >
           <ChevronDown size={32} />
@@ -154,14 +154,14 @@ export const ContentSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section id="content-section" className="w-full bg-background text-foreground py-16 px-4 lg:px-0">
+    <section id="content-section" className="w-full bg-[#00150C] text-white py-16 px-4 lg:px-0">
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-12">
         <FadeIn>
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
               Tarekegn Bekele
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-primary mt-4 font-medium">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#00C764] mt-4 font-medium">
               Chief Administrator of Koore Zone
             </p>
           </div>
@@ -186,12 +186,12 @@ export const ContentSection = () => {
           <div className="w-full lg:w-3/5 space-y-8">
             {/* Mission */}
             <FadeIn delay={0.2} direction="left">
-              <div className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3 flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+              <div className="bg-[#001A0F]/80 backdrop-blur-md border border-[#002214] rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#00C764] mb-3 flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 bg-[#00C764] rounded-full animate-pulse"></span>
                   Our Mission
                 </h2>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   By establishing the rule of law and democracy, ensuring equitable development benefits for all nations and peoples, and creating a region conducive to citizen well-being and progress, we aim to ensure sustainable economic growth and shared prosperity.
                 </p>
               </div>
@@ -199,12 +199,12 @@ export const ContentSection = () => {
 
             {/* Vision */}
             <FadeIn delay={0.4} direction="left">
-              <div className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-3 flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+              <div className="bg-[#001A0F]/80 backdrop-blur-md border border-[#002214] rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.01]">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#00C764] mb-3 flex items-center gap-2">
+                  <span className="inline-block w-2 h-2 bg-[#00C764] rounded-full animate-pulse"></span>
                   Our Vision
                 </h2>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   To become a symbol of prosperity by building an economic and political society grounded in strong national unity, inclusive governance, and sustainable development.
                 </p>
               </div>
@@ -221,7 +221,7 @@ export const ContentSection = () => {
 // ——————————————————————————————————————————————————
 export const Home1Section = () => {
   return (
-    <div className="w-full m-0 p-0">
+    <div className="w-full m-0 p-0 bg-[#00150C] text-white">
       <HeroSection />
       <ContentSection />
     </div>

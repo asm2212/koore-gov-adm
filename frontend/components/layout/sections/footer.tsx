@@ -37,19 +37,7 @@ const socialLinks = [
     label: "Follow us on TikTok",
     icon: <FaTiktok className="text-white group-hover:text-[#00C764] transition-colors" size={18} />,
     desc: "Engaging public awareness videos and campaigns.",
-  },
-  {
-    href: "https://www.instagram.com/koorezonegovecommunication.123/",
-    label: "Follow us on Instagram",
-    icon: <FaInstagram className="text-white group-hover:text-[#00C764] transition-colors" size={18} />,
-    desc: "Visual stories from Koore Zone: events, tourism, and culture.",
-  },
-  {
-    href: "https://whatsapp.com/channel/0029VauIpRIBvvsh2ymxyD09",
-    label: "Join us on WhatsApp",
-    icon: <FaWhatsapp className="text-white group-hover:text-[#00C764] transition-colors" size={18} />,
-    desc: "Get instant updates and contact support via WhatsApp.",
-  },
+  }
 ];
 
 export const FooterSection = () => {
