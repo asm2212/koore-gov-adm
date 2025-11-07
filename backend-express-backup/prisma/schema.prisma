@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(PUBLIC)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  active    Boolean  @default(true)
+  deleted   Boolean  @default(false)
+}
+
+model News {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String    @db.LongText // ✅ long article text
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  authorId  Int
+  deletedAt DateTime?
+  images    Json?
+  category  Category  @default(GENERAL)
+  language  Language?
+
+  @@index([category])
+  @@index([language])
+  @@index([createdAt])
+}
+
+model ContactMessage {
+  id        Int       @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String
+  subject   String
+  message   String    @db.LongText // ✅ free-form messages
+  createdAt DateTime  @default(now())
+  responded Boolean   @default(false)
+  deletedAt DateTime?
+
+  @@index([email])
+  @@index([subject])
+  @@index([createdAt])
+}
+
+model Doc {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?  @db.Text // ✅ moderate length description
+  category    String
+  fileUrl     String
+  fileType    String
+  createdAt   DateTime @default(now())
+}
+
+enum Role {
+  ADMIN
+  WRITER
+  PUBLIC
+  SUPER_ADMIN
+}
+
+enum Category {
+  TRENDING
+  TODAY
+  WEEKLY
+  GENERAL
+}
+
+enum Language {
+  EN
+  AM
+}
